@@ -1,0 +1,267 @@
+.logo {
+  margin-bottom: 7rem;
+
+  @media (max-width: 815px) {
+    margin-bottom: 3rem;
+  }
+}
+
+.calc {
+  height: 44rem;
+  width: 80rem;
+
+  display: flex;
+
+  background-color: white;
+
+  border-radius: 2rem;
+
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 815px) {
+    height: 85%;
+    width: 95%;
+
+    flex-direction: column;
+  }
+
+  //LEFT SIDE
+  &__left {
+    flex: 0 0 50%;
+    padding: 2.5rem 1rem 2.5rem 3rem;
+
+    @media (max-width: 815px) {
+      padding: 2.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+
+      color: var(--color-secondary-very-dark-cyan);
+
+      font-size: 1.6rem;
+
+      font-weight: 700;
+
+      &__form {
+        position: relative;
+
+        @media (max-width: 815px) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      &__input {
+        height: 3rem;
+        width: 100%;
+
+        padding: 2rem;
+
+        border: 2px solid transparent;
+
+        border-radius: 0.5rem;
+
+        background-color: var(--color-secondary-2light-grayish-cyan);
+
+        font-size: 2rem;
+        font-family: inherit;
+        font-weight: 700;
+        color: var(--color-secondary-very-dark-cyan);
+
+        text-align: right;
+
+        cursor: pointer;
+
+        &::placeholder {
+          color: var(--color-secondary-1dark-grayish-cyan);
+          font-weight: 400;
+        }
+
+        &:focus {
+          outline: none;
+          border: 2px solid var(--color-primary-strong-cyan);
+        }
+      }
+
+      .ic-dol {
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+      }
+
+      //INPUT "CUSTOM"
+      .custom {
+        height: 100%;
+        padding: 0.5rem;
+
+        font-size: 2rem;
+        text-align: end;
+        &::placeholder {
+          color: var(--color-secondary-1dark-grayish-cyan);
+
+          font-weight: 700;
+          text-align: center;
+        }
+      }
+
+      //BUTTONS CONTAINER
+      &__btns {
+        display: grid;
+        grid-template-rows: 5rem 5rem;
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-gap: 1rem;
+
+        @media (max-width: 815px) {
+          margin-bottom: 2.5rem;
+        }
+
+        //ALL BUTTONS
+        .btn {
+          border: none;
+          border-radius: 0.4rem;
+
+          background-color: var(--color-secondary-very-dark-cyan);
+          color: white;
+
+          font-family: inherit;
+          font-size: 2rem;
+
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--color-primary-strong-cyan);
+            filter: opacity(0.6);
+          }
+        }
+      }
+
+      //Number Of People
+      &__nOP {
+        position: relative;
+
+        .ic-per {
+          position: absolute;
+          top: 4.8rem;
+          left: 1.2rem;
+          z-index: 10;
+        }
+      }
+    }
+  }
+
+  //RIGHT SIDE
+  &__right {
+    flex: 1;
+    padding: 2.5rem;
+
+    @media (max-width: 815px) {
+      padding-top: 0rem;
+    }
+
+    .display {
+      height: 100%;
+      width: 100%;
+
+      padding: 4rem 3rem;
+
+      background-color: var(--color-secondary-very-dark-cyan);
+
+      border-radius: 2rem;
+
+      @media (max-width: 815px) {
+        padding: 2.5rem;
+      }
+
+      .tip-total {
+        @media (max-width: 815px) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      // TIP AMOUNT + TIP TOTAL CONTAINERS
+      .tip-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+
+        &--text {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: var(--color-secondary-2dark-grayish-cyan);
+
+          span {
+            font-size: 1.6rem;
+            color: white;
+            font-weight: 400;
+          }
+        }
+
+        &--value {
+          font-size: 4rem;
+          font-weight: 700;
+          color: var(--color-primary-strong-cyan);
+        }
+      }
+
+      //DISPLAY BUTTON
+      &__btn {
+        width: 100%;
+
+        border: none;
+        border-radius: 0.4rem;
+
+        padding: 1rem 0;
+
+        font-size: 1.6rem;
+        text-transform: uppercase;
+
+        background-color: var(--color-primary-strong-cyan);
+        filter: opacity(0.4);
+
+        color: var(--color-secondary-1dark-grayish-cyan);
+        font-weight: 700;
+
+        cursor: pointer;
+      }
+    }
+  }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//ERRORS
+
+.error-1,
+.error-2 {
+  position: absolute;
+  bottom: 54px;
+  right: 0px;
+
+  color: red;
+
+  opacity: 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//HELPERS
+.mb1 {
+  margin-bottom: 1rem;
+}
+
+.mb2 {
+  margin-bottom: 2rem;
+}
+
+.mb3 {
+  margin-bottom: 3rem;
+}
+
+.mb4 {
+  margin-bottom: 4rem;
+}
+
+.mb13 {
+  margin-bottom: 13rem;
+}

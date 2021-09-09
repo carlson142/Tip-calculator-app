@@ -1,0 +1,47 @@
+:root {
+  --color-primary-strong-cyan: hsl(172, 67%, 45%);
+
+  --color-secondary-very-dark-cyan: hsl(183, 100%, 15%);
+
+  --color-secondary-1dark-grayish-cyan: hsl(186, 14%, 43%);
+  --color-secondary-2dark-grayish-cyan: hsl(184, 14%, 56%);
+
+  --color-secondary-1light-grayish-cyan: hsl(185, 41%, 84%);
+  --color-secondary-2light-grayish-cyan: hsl(189, 41%, 97%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Mono", sans-serif;
+  font-weight: 400;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  width: 144rem;
+
+  background-color: var(--color-secondary-1light-grayish-cyan);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 815px) {
+    width: 375px;
+  }
+}

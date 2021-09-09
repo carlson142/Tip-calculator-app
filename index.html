@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="logo">
+        <img src="img/logo.svg" alt="logo" class="logo-img" />
+      </div>
+
+      <!--CALCULATOR-->
+      <div class="calc">
+        <!--LEFT SIDE-->
+        <div class="calc__left">
+          <div class="container">
+            <div class="container__bill mb1"><span>Bill</span></div>
+
+            <!--FORM BILL-->
+            <form action="#" class="container__form mb3">
+              <img src="img/icon-dollar.svg" alt="Dollar" class="ic-dol" />
+              <input
+                type="text"
+                placeholder="0"
+                class="container__input"
+                id="bill"
+              />
+              <!--Error message 1-->
+              <div class="error-1">Can't be zero!</div>
+            </form>
+
+            <div class="container__tip mb1"><span>Select Tip %</span></div>
+
+            <!--BUTTONS-->
+            <div class="container__btns mb4">
+              <button class="btn btn5">5%</button>
+              <button class="btn btn10">10%</button>
+              <button class="btn btn15">15%</button>
+              <button class="btn btn25">25%</button>
+              <button class="btn btn50">50%</button>
+              <input
+                type="text"
+                placeholder="Custom"
+                class="container__input custom"
+                id="custom"
+              />
+            </div>
+
+            <div class="container__nOP mb1">
+              <span>Number of People</span>
+              <img src="img/icon-person.svg" alt="Dollar" class="ic-per" />
+            </div>
+
+            <form action="#" class="container__form">
+              <input
+                type="text"
+                placeholder="0"
+                class="container__input"
+                id="num_of-people"
+              />
+              <!--Error message 2-->
+
+              <div class="error-2">Can't be zero!</div>
+            </form>
+          </div>
+        </div>
+
+        <!--RIGHT SIDE-->
+        <div class="calc__right">
+          <!--CONTAINER-->
+          <div class="display">
+            <!--Tip Amount / Person-->
+            <div class="tip-container tip-amount mb2">
+              <p class="tip-container--text">
+                <span>Tip Amount</span> <br />/ person
+              </p>
+
+              <div class="tip-container--value">
+                <div class="value-1">$0.00</div>
+              </div>
+            </div>
+
+            <!--Total / Person-->
+            <div class="tip-container tip-total mb13">
+              <p class="tip-container--text">
+                <span>Total</span> <br />/ person
+              </p>
+
+              <div class="tip-container--value">
+                <div class="value-2">$0.00</div>
+              </div>
+            </div>
+
+            <!--BUTTON-->
+            <button class="display__btn" onclick="window.location.reload()">
+              <!--Reload page ob click-->
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
